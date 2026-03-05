@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="unsafe-url" />
+  <title>Virginia Museum of Fine Arts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-main">
+      <a class="logo" href="#" onclick="showPage('home'); return false;">
+        <div class="logo-letters">
+          <span class="logo-v">V</span><span class="logo-m">M</span><span class="logo-f">F</span><span class="logo-a">A</span>
+        </div>
+        <div class="logo-name">
+          Virginia Museum<br>of Fine Arts
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showPage('home'); return false;" data-page="home" class="active">Home</a></li>
+          <li><a href="#" onclick="showPage('exhibitions'); return false;" data-page="exhibitions">Exhibitions</a></li>
+          <li><a href="#" onclick="showPage('artists'); return false;" data-page="artists">Featured Artists</a></li>
+          <li><a href="#" onclick="showPage('visit'); return false;" data-page="visit">Plan Your Visit</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" id="menuBtn">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="menuClose">&#10005;</button>
+    <ul>
+      <li><a href="#" onclick="showPage('home'); closeMobileNav(); return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('exhibitions'); closeMobileNav(); return false;">Exhibitions</a></li>
+      <li><a href="#" onclick="showPage('artists'); closeMobileNav(); return false;">Featured Artists</a></li>
+      <li><a href="#" onclick="showPage('visit'); closeMobileNav(); return false;">Plan Your Visit</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- HOME PAGE -->
+    <section class="page active" id="home">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-video-wrap">
+          <video autoplay muted loop playsinline>
+            <source src="VMFAFinalWebsiteLoop5mb.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-box">
+          <h1>Welcome to VMFA</h1>
+          <p>A world-class art museum with hometown hospitality. Over 50,000 works from almost every major world culture.</p>
+          <div class="hero-btns">
+            <button class="btn-red" onclick="showPage('visit')">Plan Your Visit</button>
+            <button class="btn-outline" onclick="showPage('exhibitions')">See What's On</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Bar -->
+      <div class="info-bar">
+        <div class="info-bar-item">
+          <div><strong>Today's Hours</strong><span class="todays-hours-display">10 am – 5 pm</span></div>
+        </div>
+        <div class="info-bar-item">
+          <div><strong>Location</strong><span>200 N Arthur Ashe Blvd, Richmond, VA</span></div>
+        </div>
+        <div class="info-bar-item">
+          <div><strong>Admission</strong><span>General admission always free</span></div>
+        </div>
+        <div class="info-bar-item">
+          <div><strong>Open</strong><span>365 days a year</span></div>
+        </div>
+      </div>
+
+      <!-- Current Exhibition -->
+      <div class="current-exhibition">
+        <div class="inner">
+          <div>
+            <div class="label">Current Exhibition</div>
+            <h2>Giants: Art from the Dean Collection of Swizz Beatz and Alicia Keys</h2>
+            <p class="dates">November 22, 2025 &ndash; March 1, 2026 &nbsp;&middot;&nbsp; Altria Group Gallery</p>
+            <p>A landmark exhibition celebrating Black artistic excellence, featuring works by Jean-Michel Basquiat, Kerry James Marshall, Amy Sherald, and more from the renowned private collection of Swizz Beatz and Alicia Keys.</p>
+            <button class="btn-red" onclick="showPage('exhibitions')">View Exhibition</button>
+          </div>
+          <img src="images/giants.jpg" alt="Giants Exhibition" />
+        </div>
+      </div>
+
+      <!-- Featured Events -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Featured Events</h2>
+          <a href="#" class="see-all" onclick="showPage('exhibitions'); return false;">View All Events &rarr;</a>
+        </div>
+        <div class="events-grid">
+
+          <div class="event-card">
+            <div class="event-img" style="background-image: url('https://www.vmfa.museum/outbound/medias?w=800&file=images%2FHipHop%20Line%20Dancing.jpg'); background-size: cover; background-position: center;">
+              <span class="event-img-label">Music &amp; Performing Arts</span>
+            </div>
+            <div class="event-body">
+              <p class="event-category">Music &amp; Performing Arts</p>
+              <h3>After 5 Fridays | Dance After Work</h3>
+              <p class="event-meta">Friday, February 20 &middot; 6 pm &middot; Cochrane Atrium</p>
+              <p class="event-desc">Virginia Union University Divine Nine Step Performance. Free with museum admission.</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-img" style="background-image: url('https://www.vmfa.museum/img/0a3993f2-3df6-4c57-835e-3b2f4986b0ff/Sherald,Deliveranceright.jpg?fm=jpg&q=80&fit=max&w=800'); background-size: cover; background-position: center;">
+              <span class="event-img-label">Talks</span>
+            </div>
+            <div class="event-body">
+              <p class="event-category">Talks</p>
+              <h3>Artist Conversation: Derrick Adams and Valerie Cassel Oliver</h3>
+              <p class="event-meta">Friday, February 27 &middot; 6:30 pm &middot; Cheek Theater</p>
+              <p class="event-desc">Join artists and curators for an in-depth discussion on African American art and representation.</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-img" style="background-image: url('https://www.vmfa.museum/outbound/medias?w=800&file=images%2FMC2018_10_v1_TF_201812_d_o4%20%281%29.jpg'); background-size: cover; background-position: center;">
+              <span class="event-img-label">Talks</span>
+            </div>
+            <div class="event-body">
+              <p class="event-category">Talks</p>
+              <h3>3 in 30: Portraits by Alvin Lester</h3>
+              <p class="event-meta">Tuesday, March 3 &middot; 11 am &middot; Cochrane Atrium</p>
+              <p class="event-desc">A 30-minute guided conversation with VMFA curators exploring three remarkable portrait works.</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-img" style="background-image: url('https://www.vmfa.museum/img/72286b9e-632b-46fe-82bb-3ed75517b156/2025_118_v3_TD_202510.jpg?fm=jpg&q=80&fit=max&w=800'); background-size: cover; background-position: center;">
+              <span class="event-img-label">Social</span>
+            </div>
+            <div class="event-body">
+              <p class="event-category">Social</p>
+              <h3>Member Preview | India's Great Mughals</h3>
+              <p class="event-meta">Thursday, May 7 &middot; 10 am &middot; Altria Group Gallery</p>
+              <p class="event-desc">Members-only preview of the upcoming exhibition exploring Mughal dynasty art and culture.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Explore Collection -->
+      <div class="section-gray">
+        <div class="inner">
+          <div class="section-header">
+            <h2>Explore the Collection</h2>
+            <a href="#" class="see-all" onclick="showPage('artists'); return false;">View All Artists &rarr;</a>
+          </div>
+          <div class="collection-grid">
+            <div class="collection-tile" onclick="showPage('artists')">
+              <img src="https://www.vmfa.museum/img/f03c2da2-c435-4044-8645-556aa6dc5414/AM2018_9_v1_TF_201812_d_o4.jpg?fm=jpg&q=80&fit=max&w=500" alt="American Art" />
+              <div class="tile-label">American Art</div>
+            </div>
+            <div class="collection-tile" onclick="showPage('artists')">
+              <img src="https://www.vmfa.museum/img/4292c323-6962-47fa-b688-71b5bdc125e6/62_1_2_v2_TF_201609_o5.jpg?fm=jpg&q=80&fit=max&w=500" alt="Ancient Art" />
+              <div class="tile-label">Ancient Art</div>
+            </div>
+            <div class="collection-tile" onclick="showPage('artists')">
+              <img src="https://www.vmfa.museum/img/ee9a0e51-273c-4818-be6e-6c26ef88af71/62_31_v1_KW_200907_d_o4.jpg?fm=jpg&q=80&fit=max&w=500" alt="European Art" />
+              <div class="tile-label">European Art</div>
+            </div>
+            <div class="collection-tile" onclick="showPage('artists')">
+              <img src="https://www.vmfa.museum/img/fd885944-e883-4979-aa18-6a13266c2e5e/C_61_2013_v1_TF_201311_d_o41.jpg?fm=jpg&q=80&fit=max&w=500" alt="African American Art" />
+              <div class="tile-label">African American Art</div>
+            </div>
+            <div class="collection-tile" onclick="showPage('artists')">
+              <img src="https://www.vmfa.museum/img/1b7be6c4-1d3f-48e3-b463-13755437aab4/2020_19_v1_TF_202009_d_o4.jpg?fm=jpg&q=80&fit=max&w=500" alt="Modern and Contemporary" />
+              <div class="tile-label">Modern &amp; Contemporary</div>
+            </div>
+            <div class="collection-tile" onclick="showPage('artists')">
+              <img src="images/faberge.jpg" alt="Faberge" />
+              <div class="tile-label">Faberg&eacute; &amp; Russian Arts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member CTA -->
+      <div class="member-cta">
+        <div class="member-cta-text">
+          <h2>Become a VMFA Member</h2>
+          <p>Members enjoy free admission to ticketed special exhibitions, exclusive events, travel opportunities, shopping &amp; dining discounts, free parking, and so much more.</p>
+          <a href="https://www.vmfa.museum/membership/" target="_blank" class="btn-red">Learn About Membership</a>
+        </div>
+        <div class="member-cta-img">
+          <img src="https://www.vmfa.museum/img/58dfa840-0405-4775-8251-6c72c20bf9b4/E202405_SS_535_o53.jpg?fm=jpg&q=80&fit=max&w=700" alt="VMFA Members" />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- EXHIBITIONS PAGE -->
+    <section class="page" id="exhibitions">
+      <div class="page-hero">
+        <h1>Exhibitions &amp; Events</h1>
+        <p>Discover world-class exhibitions and engaging public programs at VMFA.</p>
+      </div>
+      <div class="section">
+        <div class="section-header"><h2>Current &amp; Upcoming Exhibitions</h2></div>
+        <div class="filter-tabs">
+          <button class="tab active" onclick="filterExhibitions('all', this)">All</button>
+          <button class="tab" onclick="filterExhibitions('current', this)">Now On View</button>
+          <button class="tab" onclick="filterExhibitions('upcoming', this)">Upcoming</button>
+        </div>
+        <div class="exhibitions-list" id="exhibitionsList">
+
+          <article class="exhibit-row" data-status="current">
+            <div class="exhibit-img-wrap">
+              <img src="images/giants.jpg" alt="Giants Exhibition" />
+              <span class="exhibit-badge current">Now On View</span>
+            </div>
+            <div class="exhibit-info">
+              <p class="exhibit-category">Special Exhibition &middot; Altria Group Gallery</p>
+              <h3>Giants: Art from the Dean Collection of Swizz Beatz and Alicia Keys</h3>
+              <p class="exhibit-dates">November 22, 2025 - March 1, 2026</p>
+              <p class="exhibit-desc">Celebrating Black artistic excellence across generations, this landmark exhibition features over 130 works by Jean-Michel Basquiat, Kerry James Marshall, Amy Sherald, Derrick Adams, and Kehinde Wiley.</p>
+              <span class="ticket-note">&#10022; Ticketed Exhibition - Members Free</span>
+            </div>
+          </article>
+
+          <article class="exhibit-row" data-status="current">
+            <div class="exhibit-img-wrap">
+              <img src="images/monet.jpg" alt="Monet" />
+              <span class="exhibit-badge current">Now On View</span>
+            </div>
+            <div class="exhibit-info">
+              <p class="exhibit-category">Permanent Collection &middot; Mellon Galleries</p>
+              <h3>Monet &amp; the Impressionists: French Masterworks</h3>
+              <p class="exhibit-dates">Ongoing &middot; Paul and Rachel Mellon Collection</p>
+              <p class="exhibit-desc">VMFA houses one of the finest collections of Impressionist paintings in the American South, including landmark works by Claude Monet, Edgar Degas, Pierre-Auguste Renoir, and Mary Cassatt.</p>
+              <span class="ticket-note">&#10022; Free with General Admission</span>
+            </div>
+          </article>
+
+          <article class="exhibit-row" data-status="upcoming">
+            <div class="exhibit-img-wrap">
+              <img src="images/mughals.jpg" alt="India's Great Mughals" />
+              <span class="exhibit-badge upcoming">Upcoming</span>
+            </div>
+            <div class="exhibit-info">
+              <p class="exhibit-category">Special Exhibition &middot; Altria Group Gallery</p>
+              <h3>India's Great Mughals: Art, Power, and Opulence</h3>
+              <p class="exhibit-dates">May 9, 2026 &ndash; August 23, 2026</p>
+              <p class="exhibit-desc">An unprecedented exhibition drawing on rarely seen manuscripts, jewels, textiles, and paintings from the Mughal dynasty, organized by the Victoria and Albert Museum.</p>
+              <span class="ticket-note">&#10022; Ticketed Exhibition - Members Free</span>
+            </div>
+          </article>
+
+          <article class="exhibit-row" data-status="upcoming">
+            <div class="exhibit-img-wrap">
+              <img src="images/faberge.jpg" alt="Fabergé" />
+              <span class="exhibit-badge upcoming">Upcoming</span>
+            </div>
+            <div class="exhibit-info">
+              <p class="exhibit-category">Special Exhibition</p>
+              <h3>Faberg&eacute;: Romance to Revolution</h3>
+              <p class="exhibit-dates">Fall 2026 (Dates TBA)</p>
+              <p class="exhibit-desc">Drawing on VMFA's unparalleled Faberg&eacute; holdings, this exhibition traces the extraordinary craftsmanship of the Faberg&eacute; firm from Imperial Russia to the revolution that ended it all.</p>
+              <span class="ticket-note">&#10022; Ticketed Exhibition - Members Free</span>
+            </div>
+          </article>
+
+          <article class="exhibit-row" data-status="upcoming">
+            <div class="exhibit-img-wrap">
+              <img src="images/jazz.jpg" alt="Jazz and Visual Art" />
+              <span class="exhibit-badge upcoming">Upcoming</span>
+            </div>
+            <div class="exhibit-info">
+              <p class="exhibit-category">Special Exhibition &middot; NewMarket Gallery</p>
+              <h3>Jazz &amp; Visual Art: The Richmond Renaissance</h3>
+              <p class="exhibit-dates">Spring 2026 (Dates TBA)</p>
+              <p class="exhibit-desc">A celebration of the deep connections between jazz music and the visual arts in Richmond, Virginia.</p>
+              <span class="ticket-note">&#10022; Free with General Admission</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTISTS PAGE -->
+    <section class="page" id="artists">
+      <div class="page-hero">
+        <h1>Featured Artists &amp; Artifacts</h1>
+        <p>Explore highlights from VMFA's permanent collection of more than 50,000 works.</p>
+      </div>
+      <div class="section">
+        <div class="artists-grid">
+          <div class="artist-card">
+            <div class="artist-img-wrap"><img src="images/dapper.jpg" alt="Dapper" /></div>
+            <div class="artist-body">
+              <p class="artist-medium">Photography</p>
+              <h3 class="artist-artwork">Dapper</h3>
+              <p class="artist-name-label">Jamel Shabazz &middot; 1980</p>
+              <p class="artist-bio">One of the most beloved street photographers of the hip-hop era, Jamel Shabazz documented the style and dignity of Black New Yorkers with warmth and intimacy.</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap"><img src="images/vessel.jpg" alt="Vessel" /></div>
+            <div class="artist-body">
+              <p class="artist-medium">Mixed Media &middot; Sculpture</p>
+              <h3 class="artist-artwork">Vessel</h3>
+              <p class="artist-name-label">Radcliffe Bailey &middot; 2012</p>
+              <p class="artist-bio">Atlanta-based artist Radcliffe Bailey creates multimedia works that weave together personal memory, African diaspora history, and cosmic imagery.</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap"><img src="images/monet.jpg" alt="Monet" /></div>
+            <div class="artist-body">
+              <p class="artist-medium">Oil on Canvas &middot; Impressionism</p>
+              <h3 class="artist-artwork">Field of Poppies, Giverny</h3>
+              <p class="artist-name-label">Claude Monet &middot; 1885</p>
+              <p class="artist-bio">A cornerstone of the Paul and Rachel Mellon Collection, this radiant Impressionist landscape captures the gardens at Giverny in full bloom.</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap"><img src="images/faberge.jpg" alt="Faberge Easter Egg" /></div>
+            <div class="artist-body">
+              <p class="artist-medium">Decorative Arts &middot; Goldsmith</p>
+              <h3 class="artist-artwork">Imperial Peter the Great Easter Egg</h3>
+              <p class="artist-name-label">Faberg&eacute; firm &middot; 1903</p>
+              <p class="artist-bio">One of only 50 Imperial Easter Eggs ever created by the House of Faberg&eacute;, presented by Tsar Nicholas II to Empress Alexandra in 1903.</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap"><img src="images/stadia.jpg" alt="Stadia III" /></div>
+            <div class="artist-body">
+              <p class="artist-medium">Painting &middot; Contemporary</p>
+              <h3 class="artist-artwork">Stadia III</h3>
+              <p class="artist-name-label">Julie Mehretu &middot; 2004</p>
+              <p class="artist-bio">Ethiopian-American artist Julie Mehretu is celebrated for her monumental abstract works that layer architectural diagrams, maps, and gestural mark-making.</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-img-wrap"><img src="images/children.jpg" alt="Let Them Be Children" /></div>
+            <div class="artist-body">
+              <p class="artist-medium">Collage &middot; Mixed Media</p>
+              <h3 class="artist-artwork">Let Them Be Children</h3>
+              <p class="artist-name-label">Deborah Roberts &middot; 2018</p>
+              <p class="artist-bio">Austin-based artist Deborah Roberts creates large-scale collages that center Black childhood, joy, and innocence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT PAGE -->
+    <section class="page" id="visit">
+      <div class="page-hero">
+        <h1>Plan Your Visit</h1>
+        <p>Everything you need to know before you arrive at VMFA.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Hours of Operation</h3>
+          <div class="hours-table">
+            <div class="hours-row"><span class="day">Saturday - Tuesday</span><span class="time">10 am - 5 pm</span></div>
+            <div class="hours-row"><span class="day">Wednesday - Friday</span><span class="time">10 am - 9 pm</span></div>
+          </div>
+          <p class="visit-note">Open 365 days a year, including most holidays. Last entry 30 minutes before closing.</p>
+        </div>
+        <div class="visit-card">
+          <h3>Admission &amp; Tickets</h3>
+          <div class="ticket-table">
+            <div class="ticket-row"><div><strong>General Admission</strong><p>Permanent collection &amp; galleries</p></div><span class="price free">Always Free</span></div>
+            <div class="ticket-row"><div><strong>Special Exhibition - Adult</strong></div><span class="price">$20</span></div>
+            <div class="ticket-row"><div><strong>Special Exhibition - Senior (62+)</strong></div><span class="price">$16</span></div>
+            <div class="ticket-row"><div><strong>Special Exhibition - Student</strong><p>Valid student ID required</p></div><span class="price">$12</span></div>
+            <div class="ticket-row"><div><strong>Children under 7</strong></div><span class="price free">Free</span></div>
+            <div class="ticket-row"><div><strong>VMFA Members</strong></div><span class="price free">Free</span></div>
+          </div>
+          <a href="https://www.vmfa.museum/visit/tickets/" target="_blank" class="btn-red" style="margin-top: 16px; width: 100%; display: block; text-align: center;">Buy Tickets Online</a>
+        </div>
+        <div class="visit-card">
+          <h3>Location &amp; Getting Here</h3>
+          <address class="visit-address">200 N Arthur Ashe Boulevard<br>Richmond, Virginia 23220</address>
+          <div class="transit-info">
+            <div class="transit-item"><strong>By Car</strong><p>Take I-195 to Exit 1B (Boulevard). Parking available in the museum lot and nearby garages.</p></div>
+            <div class="transit-item"><strong>Parking</strong><p>On-site parking available. Members receive complimentary parking. Daily rate: $5.</p></div>
+            <div class="transit-item"><strong>By Bus</strong><p>GRTC Route 2 (Boulevard) stops directly in front of the museum.</p></div>
+          </div>
+        </div>
+        <div class="visit-card">
+          <h3>Accessibility &amp; Services</h3>
+          <ul class="amenities-list">
+            <li>&#10003; Fully wheelchair accessible</li>
+            <li>&#10003; Elevator access to all floors</li>
+            <li>&#10003; Assistive listening devices available</li>
+            <li>&#10003; Large print guides on request</li>
+            <li>&#10003; Sensory-friendly programming</li>
+            <li>&#10003; Service animals welcome</li>
+            <li>&#10003; Audio guides available</li>
+            <li>&#10003; Free coat &amp; bag check</li>
+          </ul>
+        </div>
+        <div class="visit-card">
+          <h3>Dining at VMFA</h3>
+          <div class="dining-options">
+            <div class="dining-item"><strong>Best Cafe</strong><p>Full-service restaurant offering breakfast, lunch, and dinner. Open daily with seasonal menus.</p><span class="dining-hours">Tue-Sun: 11 am - 3 pm &middot; Fri-Sat: 5 pm - 9 pm</span></div>
+            <div class="dining-item"><strong>Amuse Wine Bar</strong><p>Curated wine and cocktail selection with small plates. Located on the main level.</p><span class="dining-hours">Wed-Sun: 4 pm - closing</span></div>
+          </div>
+        </div>
+        <div class="visit-card">
+          <h3>Contact &amp; Group Visits</h3>
+          <div class="contact-info">
+            <div class="contact-item"><strong>General Info</strong><p>(804) 340-1400</p></div>
+            <div class="contact-item"><strong>Group Visits</strong><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e384918c969390a3958e8582cd8e969086968e">[email&#160;protected]</a></p><p>Groups of 10+ receive guided tours and discounts. Advance booking required.</p></div>
+            <div class="contact-item"><strong>Private Events</strong><p>VMFA's galleries and spaces are available for private events and rentals.</p></div>
+          </div>
+          <a href="https://www.vmfa.museum/visit/group-visits/" target="_blank" class="btn-outline-red" style="margin-top: 16px; width: 100%; display: block; text-align: center;">Plan a Group Visit</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
